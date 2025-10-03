@@ -30,7 +30,7 @@ export function PhotoGallery() {
     },
 
     {
-      src: "/side_hub.jpg",
+      src: "/side_hug.jpg",
       alt: "Hug on beach",
     },
     {

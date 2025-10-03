@@ -19,7 +19,7 @@ export function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src="/360_couple.jpg" alt="Couple portrait" className="w-full h-full object-cover" />
+        <img src="/ring_showing.jpg" alt="Couple portrait" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       </div>
 
