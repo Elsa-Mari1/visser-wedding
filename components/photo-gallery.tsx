@@ -25,28 +25,28 @@ export function PhotoGallery() {
 
   const photos = [
     {
-      src: "/happy-couple-laughing.png",
-      alt: "Couple laughing together",
+      src: "/show_ring.jpg",
+      alt: "Couple showing ring",
     },
     {
-      src: "/romantic-couple-walking-on-beach.jpg",
-      alt: "Walking on the beach",
+      src: "/knysna_red.jpg",
+      alt: "In Knysna in red",
     },
     {
-      src: "/couple-having-picnic-in-park.jpg",
-      alt: "Picnic in the park",
+      src: "/constantia_glen.jpg",
+      alt: "Constantia Glen",
     },
     {
-      src: "/couple-dancing.png",
-      alt: "Dancing together",
+      src: "/allee_blue.png",
+      alt: "Allee blue",
     },
     {
       src: "/mountain-hiking-couple.png",
       alt: "Hiking adventure",
     },
     {
-      src: "/couple-cooking.png",
-      alt: "Cooking together",
+      src: "/360_couple.png",
+      alt: "360 couple",
     },
   ]
 
