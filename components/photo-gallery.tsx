@@ -26,27 +26,35 @@ export function PhotoGallery() {
   const photos = [
     {
       src: "/show_ring.jpg",
-      alt: "Couple showing ring",
+      alt: "Showing the engagement ring",
     },
     {
       src: "/knysna_red.jpg",
-      alt: "In Knysna in red",
+      alt: "Together in Knysna",
     },
     {
       src: "/constantia_glen.jpg",
-      alt: "Constantia Glen",
+      alt: "At Constantia Glen",
     },
     {
-      src: "/allee_blue.png",
-      alt: "Allee blue",
+      src: "/allee_blue.jpg",
+      alt: "Allee Bleue wine estate",
     },
     {
-      src: "/mountain-hiking-couple.png",
-      alt: "Hiking adventure",
+      src: "/360_couple.jpg",
+      alt: "360 degree couple photo",
     },
     {
-      src: "/360_couple.png",
-      alt: "360 couple",
+      src: "/beuld_venue.jpg",
+      alt: "Beuld venue",
+    },
+    {
+      src: "/knysna_pool.jpg",
+      alt: "Pool in Knysna",
+    },
+    {
+      src: "/simola_padel.jpg",
+      alt: "Playing padel at Simola",
     },
   ]
 
