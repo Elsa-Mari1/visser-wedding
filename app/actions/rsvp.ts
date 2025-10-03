@@ -8,8 +8,6 @@ export async function submitRsvp(formData: FormData) {
 
     const firstName = formData.get("firstName") as string
     const lastName = formData.get("lastName") as string
-    const email = formData.get("email") as string | null
-    const phone = formData.get("phone") as string | null
     const attending = formData.get("attending") === "yes"
     const guests = Number.parseInt(formData.get("guests") as string)
     const dietary = formData.get("dietary") as string | null
@@ -18,8 +16,6 @@ export async function submitRsvp(formData: FormData) {
     const { error } = await supabase.from("rsvps").insert({
       first_name: firstName,
       last_name: lastName,
-      email: email || null,
-      phone: phone || null,
       attending,
       number_of_guests: guests,
       dietary_restrictions: dietary || null,
