@@ -90,7 +90,7 @@ export function VenueLocation() {
           </div>
 
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <img src="/elegant-garden-venue-with-fountain.jpg" alt="Venue location" className="w-full h-full object-cover" />
+            <img src="/beuld_venue.jpg" alt="Venue location" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

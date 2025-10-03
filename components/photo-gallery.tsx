@@ -25,8 +25,13 @@ export function PhotoGallery() {
 
   const photos = [
     {
-      src: "/show_ring.jpg",
+      src: "/pink_ernie_els.jpg",
       alt: "Showing the engagement ring",
+    },
+
+    {
+      src: "/side_hub.jpg",
+      alt: "Hug on beach",
     },
     {
       src: "/knysna_red.jpg",
