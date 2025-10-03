@@ -28,7 +28,7 @@ export function WeddingDetails() {
     {
       icon: Calendar,
       title: "Date",
-      content: "Saturday, June 15, 2025",
+      content: "Saturday, February 14, 2026",
     },
     {
       icon: Clock,
@@ -38,12 +38,12 @@ export function WeddingDetails() {
     {
       icon: MapPin,
       title: "Venue",
-      content: "The Grand Estate Gardens",
+      content: "Beuld The Venue",
     },
     {
       icon: Users,
       title: "Dress Code",
-      content: "Formal Attire",
+      content: "Black Tie",
     },
   ]
 

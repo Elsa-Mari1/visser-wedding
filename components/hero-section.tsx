@@ -29,10 +29,10 @@ export function HeroSection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-4 text-balance">Sarah & Michael</h1>
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-4 text-balance">Steven & Elsa-Mari</h1>
         <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide mb-8">We're Getting Married</p>
         <div className="text-lg md:text-xl font-light">
-          <p>June 15, 2025</p>
+          <p>February 14, 2026</p>
         </div>
       </div>
 

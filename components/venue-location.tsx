@@ -27,8 +27,8 @@ export function VenueLocation() {
 
   const venueAddress = "123 Garden Lane, Beautiful City, ST 12345"
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "The Grand Estate Gardens " + venueAddress,
-  )}`
+  "Roodehoogte, Robertson, 6705"
+)}`;
 
   return (
     <section id="venue-location" ref={sectionRef} className="py-20 md:py-32 px-4 bg-muted/30">
@@ -55,7 +55,7 @@ export function VenueLocation() {
         >
           <div className="space-y-6">
             <div>
-              <h3 className="font-serif text-2xl md:text-3xl mb-2 text-foreground">The Grand Estate Gardens</h3>
+              <h3 className="font-serif text-2xl md:text-3xl mb-2 text-foreground">Beuld The Venue</h3>
               <p className="text-lg text-muted-foreground">{venueAddress}</p>
             </div>
 
@@ -63,8 +63,7 @@ export function VenueLocation() {
               <div>
                 <h4 className="font-medium text-lg mb-2 text-foreground">Parking Information</h4>
                 <p className="text-muted-foreground">
-                  Complimentary valet parking is available for all guests. Additional parking is available in the
-                  adjacent lot.
+                  Complimentary valet parking is available for all guests.
                 </p>
               </div>
 

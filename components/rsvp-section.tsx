@@ -105,7 +105,7 @@ export function RsvpSection() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" placeholder="john@example.com" />
@@ -114,7 +114,7 @@ export function RsvpSection() {
               <Label htmlFor="phone">Phone</Label>
               <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" />
             </div>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -129,7 +129,7 @@ export function RsvpSection() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <Label htmlFor="guests">Number of Guests *</Label>
               <Select name="guests" defaultValue="1" required>
                 <SelectTrigger id="guests">
@@ -142,7 +142,7 @@ export function RsvpSection() {
                   <SelectItem value="4">4 Guests</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-2">
