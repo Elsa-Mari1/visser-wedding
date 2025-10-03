@@ -25,13 +25,16 @@ export function PhotoGallery() {
 
   const photos = [
     {
-      src: "/pink_ernie_els.jpg",
+      src: "/ring_showing.jpg",
       alt: "Showing the engagement ring",
     },
-
     {
-      src: "/side_hug.jpg",
-      alt: "Hug on beach",
+      src: "/fav_spin.jpg",
+      alt: "Favorite spin moment",
+    },
+    {
+      src: "/hand_on_face.jpg",
+      alt: "Tender moment",
     },
     {
       src: "/knysna_red.jpg",
@@ -48,6 +51,14 @@ export function PhotoGallery() {
     {
       src: "/360_couple.jpg",
       alt: "360 degree couple photo",
+    },
+    {
+      src: "/pink_ernie_els.jpg",
+      alt: "At Ernie Els winery",
+    },
+    {
+      src: "/side_hug.jpg",
+      alt: "Side hug moment",
     },
     {
       src: "/beuld_venue.jpg",
