@@ -105,44 +105,17 @@ export function RsvpSection() {
             </div>
           </div>
 
-          {/* <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" placeholder="john@example.com" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" />
-            </div>
-          </div> */}
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="attending">Will you attend? *</Label>
-              <Select name="attending" defaultValue="yes" required>
-                <SelectTrigger id="attending">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="yes">Joyfully Accept</SelectItem>
-                  <SelectItem value="no">Regretfully Decline</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            {/* <div className="space-y-2">
-              <Label htmlFor="guests">Number of Guests *</Label>
-              <Select name="guests" defaultValue="1" required>
-                <SelectTrigger id="guests">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="1">1 Guest</SelectItem>
-                  <SelectItem value="2">2 Guests</SelectItem>
-                  <SelectItem value="3">3 Guests</SelectItem>
-                  <SelectItem value="4">4 Guests</SelectItem>
-                </SelectContent>
-              </Select>
-            </div> */}
+          <div className="space-y-2">
+            <Label htmlFor="attending">Will you attend? *</Label>
+            <Select name="attending" defaultValue="yes" required>
+              <SelectTrigger id="attending">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Joyfully Accept</SelectItem>
+                <SelectItem value="no">Regretfully Decline</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="space-y-2">

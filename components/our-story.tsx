@@ -39,6 +39,7 @@ export function OurStory() {
         </div>
 
         <div className="space-y-12">
+          {/* How We Met */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -47,28 +48,35 @@ export function OurStory() {
           >
             <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">How We Met</h3>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              Our story began on a rainy autumn evening at a cozy coffee shop in downtown. Sarah was reading her
-              favorite book, and Michael accidentally spilled his coffee while trying to grab the last available seat.
-              What started as an awkward apology turned into hours of conversation, laughter, and the beginning of
-              something beautiful.
+              Steven and Elsa-Mari met at a speed dating event at church. Elsa-Mari’s best friend, Jeanne-Marie,
+              convinced her to go—even though she wasn’t too keen at first. To make it easier, she brought her brother,
+              Jacques, along so she’d know someone there.  
+              <br /><br />
+              It wasn’t love at first sight for either of us, but after the holidays, Elsa-Mari finally replied to
+              Steven, and we went on our first date: a walk along the Sea Point Promenade. Our second date was a sunset
+              walk on Kloof Corner, and the third was a quick coffee before church. The very next week, after the
+              service, Steven asked if he could cook dinner for Elsa-Mari at his flat—and that Thursday, when she saw him
+              walking down the stairs to welcome her, she started to feel butterflies. Over dinner, she realized this guy
+              was something special. From there, we were hooked.  
             </p>
           </div>
 
+          {/* The Beginning of Us */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">The Proposal</h3>
+            <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">The Beginning of Us</h3>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              Three years later, Michael planned a surprise trip back to that same coffee shop. After a beautiful
-              dinner, he led Sarah to their special corner table, now decorated with candles and flowers. As the rain
-              gently tapped against the windows, just like that first night, he got down on one knee and asked her to
-              spend forever with him. Through happy tears, she said yes.
+              Soon after, Elsa-Mari invited Steven to join her family on holiday at Simola in Knysna. At the Knysna
+              Waterfront, Steven read her a poem and asked her to be his girlfriend. That was the moment our relationship
+              officially began—and from then on, our story has been one of love, adventure, and growing together.  
             </p>
           </div>
 
+          {/* Looking Forward */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -77,8 +85,8 @@ export function OurStory() {
           >
             <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">Looking Forward</h3>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              Now, we're excited to start this new chapter of our lives together, surrounded by the people we love most.
-              We can't wait to celebrate with you and create new memories that will last a lifetime.
+              Now, we’re so excited for this new chapter of our lives together. We can’t wait to celebrate our wedding
+              day surrounded by the people we love most and to continue building our story together.  
             </p>
           </div>
         </div>
