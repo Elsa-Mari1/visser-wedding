@@ -30,7 +30,7 @@ export function PhotoGallery() {
       alt: "Tender moment",
     },
     {
-      src: "/knysna_red.jpg",
+      src: "/knysna_red2.jpg",
       alt: "Together in Knysna",
     },
     {
