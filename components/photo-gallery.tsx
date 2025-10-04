@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function PhotoGallery() {
   const [isVisible, setIsVisible] = useState(false)
@@ -97,7 +98,13 @@ export function PhotoGallery() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <img src={photo.src || "/placeholder.svg"} alt={photo.alt} className="w-full h-full object-cover" />
+              <Image 
+                src={photo.src} 
+                alt={photo.alt} 
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           ))}
         </div>

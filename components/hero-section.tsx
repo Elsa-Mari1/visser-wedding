@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -19,7 +20,16 @@ export function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src="/ring_showing.jpg" alt="Couple portrait" className="w-full h-full object-cover" />
+        <div className="relative h-screen">
+  <Image 
+    src="/ring_showing.jpg"
+    alt="Steven and Elsa-Mari"
+    fill
+    className="object-cover"
+    priority  // Loads first since it's hero image
+    quality={90}
+  />
+</div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       </div>
 
