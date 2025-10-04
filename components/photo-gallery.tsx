@@ -25,17 +25,23 @@ export function PhotoGallery() {
   }, [])
 
   const photos = [
-    {
-      src: "/hand_on_face.jpg",
-      alt: "Tender moment",
-    },
-    // {
-    //   src: "/knysna_red2.jpg",
-    //   alt: "Together in Knysna",
-    // },
+ 
+  
     {
       src: "/constantia_glen.jpg",
       alt: "At Constantia Glen",
+    },
+       {
+      src: "/knysna_pool.jpg",
+      alt: "Pool in Knysna",
+    },
+     {
+      src: "/simola_padel.jpg",
+      alt: "Playing padel at Simola",
+    },
+      {
+      src: "/knysna_red2.jpg",
+      alt: "Together in Knysna",
     },
     {
       src: "/allee_blue.jpg",
@@ -53,14 +59,12 @@ export function PhotoGallery() {
       src: "/side_hug.jpg",
       alt: "Side hug moment",
     },
-    {
-      src: "/knysna_pool.jpg",
-      alt: "Pool in Knysna",
+       {
+      src: "/hand_on_face.jpg",
+      alt: "Tender moment",
     },
-    {
-      src: "/simola_padel.jpg",
-      alt: "Playing padel at Simola",
-    },
+ 
+   
   ]
 
   return (

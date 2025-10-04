@@ -27,9 +27,8 @@ export function VenueLocation() {
   }, [])
 
   const venueAddress = "Roodehoogte, Robertson, 6705"
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "Roodehoogte, Robertson, 6705"
-  )}`
+  // Direct link to Beuld The Venue on Google Maps
+  const googleMapsUrl = "https://www.google.com/maps/place/Beuld+The+Venue/@-33.7982758,19.9054357,17z/data=!3m1!4b1!4m6!3m5!1s0x1dd269b9469dd431:0x9ed7394ca7afe06!8m2!3d-33.7982804!4d19.9103066!16s%2Fg%2F11ts99x1wn"
 
   return (
     <section id="venue-location" ref={sectionRef} className="py-20 md:py-32 px-4 bg-muted/30">
