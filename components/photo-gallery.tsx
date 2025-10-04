@@ -41,7 +41,7 @@ export function PhotoGallery() {
     },
       {
       src: "/knysna_red2.jpg",
-      alt: "Together in Knysna",
+      alt: "Together in Knysna2",
     },
     {
       src: "/allee_blue.jpg",
