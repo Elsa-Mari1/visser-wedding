@@ -29,10 +29,10 @@ export function PhotoGallery() {
       src: "/hand_on_face.jpg",
       alt: "Tender moment",
     },
-    {
-      src: "/knysna_red2.jpg",
-      alt: "Together in Knysna",
-    },
+    // {
+    //   src: "/knysna_red2.jpg",
+    //   alt: "Together in Knysna",
+    // },
     {
       src: "/constantia_glen.jpg",
       alt: "At Constantia Glen",
