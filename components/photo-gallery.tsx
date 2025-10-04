@@ -26,14 +26,6 @@ export function PhotoGallery() {
 
   const photos = [
     {
-      src: "/ring_showing.jpg",
-      alt: "Showing the engagement ring",
-    },
-    {
-      src: "/fav_spin.jpg",
-      alt: "Favorite spin moment",
-    },
-    {
       src: "/hand_on_face.jpg",
       alt: "Tender moment",
     },
@@ -60,10 +52,6 @@ export function PhotoGallery() {
     {
       src: "/side_hug.jpg",
       alt: "Side hug moment",
-    },
-    {
-      src: "/beuld_venue.jpg",
-      alt: "Beuld venue",
     },
     {
       src: "/knysna_pool.jpg",
