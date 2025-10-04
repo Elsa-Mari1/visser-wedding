@@ -73,9 +73,9 @@ export function OurStory() {
                 brother, Jacques, along so she'd know someone there.
                 <br />
                 <br />
-                It wasn't love at first sight for either of us, but after the holidays, Elsa-Mari finally replied to
+                Even though it wasn't love at first sight for both, after the holidays, Elsa-Mari finally replied to
                 Steven, and they went on their first date: a walk along the Sea Point Promenade. Their second date was a
-                sunset walk on Kloof Corner, and the third was a quick coffee before church. The very next week, after
+                sunset hike at Kloof Corner, and the third was a quick coffee before church. The very next week, after
                 the service, Steven asked if he could cook dinner for Elsa-Mari at his flat—and that Thursday, when she
                 saw him walking down the stairs to welcome her, she started to feel butterflies. Over dinner, she
                 realized this guy was something special. From there, they were hooked.
@@ -105,8 +105,8 @@ export function OurStory() {
             >
               <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">Looking Forward</h3>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-                Now, they're excited to start this new chapter of their lives together, surrounded by the people they
-                love most. They can't wait to celebrate with you and create new memories that will last a lifetime.
+                Now, we excited to start this new chapter of our lives together, surrounded by the people we
+                love most. We can't wait to celebrate with you and create new memories that will last a lifetime.
               </p>
             </div>
           </div>
