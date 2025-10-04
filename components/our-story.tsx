@@ -105,7 +105,7 @@ export function OurStory() {
             >
               <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">Looking Forward</h3>
               <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-                Now, we excited to start this new chapter of our lives together, surrounded by the people we
+                Now, we are excited to start this new chapter of our lives together, surrounded by the people we
                 love most. We can't wait to celebrate with you and create new memories that will last a lifetime.
               </p>
             </div>
