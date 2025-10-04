@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { MapPin, Navigation } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function VenueLocation() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,10 +26,10 @@ export function VenueLocation() {
     return () => observer.disconnect()
   }, [])
 
-  const venueAddress = "123 Garden Lane, Beautiful City, ST 12345"
+  const venueAddress = "Roodehoogte, Robertson, 6705"
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  "Roodehoogte, Robertson, 6705"
-)}`;
+    "Roodehoogte, Robertson, 6705"
+  )}`
 
   return (
     <section id="venue-location" ref={sectionRef} className="py-20 md:py-32 px-4 bg-muted/30">
@@ -90,7 +91,13 @@ export function VenueLocation() {
           </div>
 
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <img src="/beuld_venue.jpg" alt="Venue location" className="w-full h-full object-cover" />
+            <Image 
+              src="/beuld_venue.jpg" 
+              alt="Beuld The Venue" 
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>
