@@ -62,22 +62,24 @@ export function WeddingDetails() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {details.map((detail, index) => (
-            <div
-              key={index}
-              className={`text-center transition-all duration-1000 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <detail.icon className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-serif text-xl md:text-2xl mb-2 text-foreground">{detail.title}</h3>
-              <p className="text-muted-foreground text-balance">{detail.content}</p>
-            </div>
-          ))}
-        </div>
+  {details.map((detail, index) => (
+    <div
+      key={index}
+      className={`text-center bg-muted/20 rounded-xl p-6 shadow-sm hover:shadow-md 
+        transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      style={{ transitionDelay: `${index * 150}ms` }}
+    >
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 mx-auto">
+        <detail.icon className="w-8 h-8 text-primary" />
+      </div>
+      <h3 className="font-serif text-xl md:text-2xl mb-1 text-foreground">{detail.title}</h3>
+      <p className="text-muted-foreground text-balance">{detail.content}</p>
+    </div>
+  ))}
+</div>
+
 
         <div
           className={`mt-16 p-8 bg-muted/50 rounded-lg transition-all duration-1000 ${
