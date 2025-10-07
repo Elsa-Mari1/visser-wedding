@@ -65,14 +65,6 @@ export function PhotoGallery() {
       src: "/back_hug.jpg",
       alt: "Hug from behind",
     },
-    // {
-    //   src: "/back_spin.jpg",
-    //   alt: "Twirl around from behind",
-    // },
-    // {
-    //   src: "/black_white.jpg",
-    //   alt: "Black and white moment",
-    // },
     {
       src: "/bump_walk.jpg",
       alt: "Walk together",
@@ -109,10 +101,6 @@ export function PhotoGallery() {
       src: "/look_back.jpg",
       alt: "Look back moment",
     },
-    // {
-    //   src: "/nosed_together.jpg",
-    //   alt: "Noses together moment",
-    // },
     {
       src: "/press_up.jpg",
       alt: "Palms together moment",
@@ -168,6 +156,9 @@ export function PhotoGallery() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                priority={index < 6}
+                loading={index < 6 ? undefined : "lazy"}
+                quality={60}
               />
             </div>
           ))}
@@ -212,6 +203,8 @@ export function PhotoGallery() {
                   fill
                   className="object-contain"
                   sizes="100vw"
+                  priority
+                  quality={95}
                 />
               </div>
             </div>

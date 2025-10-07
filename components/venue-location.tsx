@@ -63,15 +63,14 @@ export function VenueLocation() {
               <div>
                 <h4 className="font-medium text-lg mb-2 text-foreground">Parking Information</h4>
                 <p className="text-muted-foreground">
-                  Complimentary valet parking is available for all guests.
+                  There is parking available at the venue for those driving. If you are staying in town, a convenient shuttle will be running to and from the venue — you can simply pay when you hop on.
                 </p>
               </div>
 
               <div>
                 <h4 className="font-medium text-lg mb-2 text-foreground">Accommodations</h4>
                 <p className="text-muted-foreground">
-                  We have reserved room blocks at nearby hotels. Please visit our wedding website for more details and
-                  booking information.
+                  Please see the next section for more details.
                 </p>
               </div>
             </div>
