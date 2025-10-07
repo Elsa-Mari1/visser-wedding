@@ -43,7 +43,7 @@ export function WeddingDetails() {
     {
       icon: Users,
       title: "Dress Code",
-      content: "Black Tie",
+      content: "Semi Formal",
     },
   ]
 
@@ -81,7 +81,7 @@ export function WeddingDetails() {
 </div>
 
 
-        <div
+        {/* <div
           className={`mt-16 p-8 bg-muted/50 rounded-lg transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
@@ -102,7 +102,7 @@ export function WeddingDetails() {
               <span className="text-muted-foreground">6:00 PM - 11:00 PM</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
