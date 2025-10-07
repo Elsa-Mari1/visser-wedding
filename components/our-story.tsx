@@ -48,12 +48,14 @@ export function OurStory() {
             style={{ transitionDelay: "200ms" }}
           >
             <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/fav_spin.jpg"
+             <Image
+                src="/fav_spin_small.jpg"
                 alt="Steven and Elsa-Mari"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 400px"
+                loading="lazy"
+                quality={80}
               />
             </div>
           </div>

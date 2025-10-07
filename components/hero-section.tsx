@@ -21,14 +21,17 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="relative h-screen">
-  <Image 
-    src="/ring_showing.jpg"
-    alt="Steven and Elsa-Mari"
-    fill
-    className="object-cover"
-    priority  // Loads first since it's hero image
-    quality={90}
-  />
+   <Image
+            src="/ring_showing_small.jpg"
+            alt="Steven and Elsa-Mari"
+            fill
+            className="object-cover"
+            priority
+            quality={85}
+            sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFhMWExYSIvPjwvc3ZnPg=="
+          />
 </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       </div>
