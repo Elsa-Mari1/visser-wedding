@@ -131,9 +131,9 @@ export function PhotoGallery() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">Our Memories</h2>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">Our Engagement</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-            A glimpse into our journey together
+            A glimpse into our us together
           </p>
           <p className="text-sm text-muted-foreground/70 mt-4 italic">
             *Click/tap on the images below to view full screen!

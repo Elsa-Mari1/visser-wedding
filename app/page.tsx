@@ -7,6 +7,7 @@ import { PhotoGallery } from "@/components/photo-gallery"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { AccommodationSection } from "@/components/accommodation"
+import { GiftSection } from "@/components/gift-section"
 
 export default function WeddingInvite() {
   return (
@@ -18,6 +19,7 @@ export default function WeddingInvite() {
       <WeddingDetails />
       <VenueLocation />
       <AccommodationSection />
+      <GiftSection />
       <RsvpSection />
       <Footer />
     </main>

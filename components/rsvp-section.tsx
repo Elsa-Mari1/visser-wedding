@@ -70,7 +70,7 @@ export function RsvpSection() {
 
   if (isSubmitted) {
     return (
-      <section id="rsvp" ref={sectionRef} className="py-20 md:py-32 px-4 bg-gradient-to-b from-background to-muted/20">
+      <section id="rsvp" ref={sectionRef} className="pt-10 pb-28 md:py-20 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-2xl mx-auto text-center">
           <div className="relative inline-flex items-center justify-center mb-6">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse" />
