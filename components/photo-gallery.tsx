@@ -7,158 +7,108 @@ export function PhotoGallery() {
   const [isVisible, setIsVisible] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [imageLoaded, setImageLoaded] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
+  const photos = [
+    { src: "/back_hug.jpg", alt: "Hug from behind" },
+    { src: "/bump_walk.jpg", alt: "Walk together" },
+    { src: "/cheek_kiss.jpg", alt: "Cheek kiss moment" },
+    { src: "/engaged_shock.jpg", alt: "Engaged shock moment" },
+    { src: "/hair_flip.jpg", alt: "Hair flip moment" },
+    { src: "/side_hug.jpg", alt: "Side hug moment" },
+    { src: "/hand_on_face.jpg", alt: "Tender moment" },
+    { src: "/fav_spin.jpg", alt: "Favorite spin moment" },
+    { src: "/laugh.jpg", alt: "Laughing together" },
+    { src: "/look_back.jpg", alt: "Look back moment" },
+    { src: "/press_up.jpg", alt: "Palms together moment" },
+    { src: "/run_catch.jpg", alt: "Run and catch moment" },
+    { src: "/run_fast.jpg", alt: "Blurred run moment" },
+    { src: "/second_spin.jpg", alt: "Second spin moment" },
+    { src: "/walk_city.jpg", alt: "Walking moment" },
+  ]
+
+  // fade-in on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
+      ([entry]) => entry.isIntersecting && setIsVisible(true),
+      { threshold: 0.1 }
     )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
+  // lightbox handlers
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index)
+    setImageLoaded(false)
     setLightboxOpen(true)
   }
 
-  const closeLightbox = () => {
-    setLightboxOpen(false)
-  }
+  const closeLightbox = () => setLightboxOpen(false)
+  const goToNext = () => setCurrentImageIndex((p) => (p + 1) % photos.length)
+  const goToPrevious = () =>
+    setCurrentImageIndex((p) => (p - 1 + photos.length) % photos.length)
 
-  const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % photos.length)
-  }
-
-  const goToPrevious = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + photos.length) % photos.length)
-  }
-
+  // keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!lightboxOpen) return
-      
-      if (e.key === "Escape") {
-        closeLightbox()
-      } else if (e.key === "ArrowLeft") {
-        goToPrevious()
-      } else if (e.key === "ArrowRight") {
-        goToNext()
-      }
+      if (e.key === "Escape") closeLightbox()
+      if (e.key === "ArrowLeft") goToPrevious()
+      if (e.key === "ArrowRight") goToNext()
     }
-
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [lightboxOpen, currentImageIndex])
-
-  const photos = [
-    {
-      src: "/back_hug.jpg",
-      alt: "Hug from behind",
-    },
-    {
-      src: "/bump_walk.jpg",
-      alt: "Walk together",
-    },
-    {
-      src: "/cheek_kiss.jpg",
-      alt: "Cheek kiss moment",
-    },
-    {
-      src: "/engaged_shock.jpg",
-      alt: "Engaged shock moment",
-    },
-    {
-      src: "/hair_flip.jpg",
-      alt: "Hair flip moment",
-    },
-    {
-      src: "/side_hug.jpg",
-      alt: "Side hug moment",
-    },
-    {
-      src: "/hand_on_face.jpg",
-      alt: "Tender moment",
-    },
-    {
-      src: "/fav_spin.jpg",
-      alt: "Favorite spin moment",
-    },
-    {
-      src: "/laugh.jpg",
-      alt: "Laughing together",
-    },
-    {
-      src: "/look_back.jpg",
-      alt: "Look back moment",
-    },
-    {
-      src: "/press_up.jpg",
-      alt: "Palms together moment",
-    },
-    {
-      src: "/run_catch.jpg",
-      alt: "Run and catch moment",
-    },
-    {
-      src: "/run_fast.jpg",
-      alt: "Blurred run moment",
-    },
-    {
-      src: "/second_spin.jpg",
-      alt: "Second spin moment",
-    },
-    {
-      src: "/walk_city.jpg",
-      alt: "Walking moment",
-    },
-  ]
+  }, [lightboxOpen])
 
   return (
-    <section id="photo-gallery" ref={sectionRef} className="py-20 md:py-32 px-4 bg-background">
+    <section
+      id="photo-gallery"
+      ref={sectionRef}
+      className="py-20 md:py-32 px-4 bg-background"
+    >
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">Our Engagement</h2>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">
+            Our Engagement
+          </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-            A glimpse into our us together
+            A glimpse into us together
           </p>
           <p className="text-sm text-muted-foreground/70 mt-4 italic">
-            *Click/tap on the images below to view full screen!
+            *Tap or click on the photos to view them full screen
           </p>
         </div>
-    
+
+        {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {photos.map((photo, index) => (
             <div
               key={index}
-              className={`relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-1000 hover:scale-105 cursor-pointer ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-1000 cursor-pointer ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onClick={() => openLightbox(index)}
             >
-              <Image 
-                src={photo.src} 
-                alt={photo.alt} 
+              <Image
+                src={photo.src}
+                alt={photo.alt}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 hover:scale-105"
                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                priority={index < 6}
-                loading={index < 6 ? undefined : "lazy"}
-                quality={60}
+                priority={index < 4}
+                loading={index < 4 ? undefined : "lazy"}
+                quality={40}
+                placeholder="blur"
+                blurDataURL="/tiny-placeholder.jpg" // small blurred placeholder image
               />
             </div>
           ))}
@@ -166,56 +116,67 @@ export function PhotoGallery() {
 
         {/* Lightbox */}
         {lightboxOpen && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
+          <div
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
             onClick={closeLightbox}
           >
-            {/* Close button */}
+            {/* Close */}
             <button
               onClick={closeLightbox}
-              className="absolute cursor-pointer top-4 right-4 text-white text-4xl font-light hover:text-gray-300 transition-colors z-10"
+              className="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 transition-colors z-10"
               aria-label="Close"
             >
               ×
             </button>
 
-            {/* Previous button */}
+            {/* Previous */}
             <button
               onClick={(e) => {
                 e.stopPropagation()
+                setImageLoaded(false)
                 goToPrevious()
               }}
-              className="absolute cursor-pointer left-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10"
+              className="absolute left-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10"
               aria-label="Previous"
             >
               ‹
             </button>
 
-            {/* Image container */}
-            <div 
+            {/* Image */}
+            <div
               className="relative w-full h-full flex items-center justify-center p-12"
               onClick={(e) => e.stopPropagation()}
             >
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin" />
+                </div>
+              )}
+
               <div className="relative max-w-7xl max-h-full w-full h-full">
                 <Image
                   src={photos[currentImageIndex].src}
                   alt={photos[currentImageIndex].alt}
                   fill
-                  className="object-contain"
+                  className={`object-contain transition-opacity duration-300 ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
                   sizes="100vw"
                   priority
-                  quality={95}
+                  quality={85}
+                  onLoad={() => setImageLoaded(true)}
                 />
               </div>
             </div>
 
-            {/* Next button */}
+            {/* Next */}
             <button
               onClick={(e) => {
                 e.stopPropagation()
+                setImageLoaded(false)
                 goToNext()
               }}
-              className="absolute cursor-pointer right-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10"
+              className="absolute right-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10"
               aria-label="Next"
             >
               ›
