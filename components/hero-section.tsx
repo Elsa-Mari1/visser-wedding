@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
 import Image from "next/image"
+import { CountdownTimer } from "./countdown-timer"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -47,7 +48,11 @@ export function HeroSection() {
         <div className="text-lg md:text-xl font-light">
           <p>February 14, 2026</p>
         </div>
+
+      
       </div>
+
+      <CountdownTimer targetDate="2026-02-14T16:00:00" variant="bottom" />
 
       {/* Scroll Indicator */}
       <button

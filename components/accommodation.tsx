@@ -23,30 +23,30 @@ export function AccommodationSection() {
 //   ];
 
  const recommendedPlaces = [
-  {
-    name: "The Robertson Small Hotel",
-    description: "Luxurious accommodation in the heart of Robertson",
-    link: "https://www.therobertsonsmallhotel.com",
-    distance: "In Robertson town center"
-  },
-  {
-    name: "Mo & Rose at Soekershof",
-    description: "Stylish guesthouse surrounded by succulents",
-    link: "https://www.moandrose.co.za",
-    distance: "Surrounded by succulents"
-  },
-  {
-    name: "Galloway Guest House",
-    description: "Peaceful accommodation with a beautiful garden",
-    link: "https://www.gallowayguesthouse.co.za",
-    distance: "Beautiful garden setting"
-  },
-  {
-    name: "Robertson Grand Hotel",
-    description: "Local luxury in the heart of town",
-    link: "https://thegrandhotel.co.za",
-    distance: "Local luxury in town"
-  },
+  // {
+  //   name: "The Robertson Small Hotel",
+  //   description: "Luxurious accommodation in the heart of Robertson",
+  //   link: "https://www.therobertsonsmallhotel.com",
+  //   distance: "In Robertson town center"
+  // },
+  // {
+  //   name: "Mo & Rose at Soekershof",
+  //   description: "Stylish guesthouse surrounded by succulents",
+  //   link: "https://www.moandrose.co.za",
+  //   distance: "Surrounded by succulents"
+  // },
+  // {
+  //   name: "Galloway Guest House",
+  //   description: "Peaceful accommodation with a beautiful garden",
+  //   link: "https://www.gallowayguesthouse.co.za",
+  //   distance: "Beautiful garden setting"
+  // },
+  // {
+  //   name: "Robertson Grand Hotel",
+  //   description: "Local luxury in the heart of town",
+  //   link: "https://thegrandhotel.co.za",
+  //   distance: "Local luxury in town"
+  // },
   {
     name: "Pat Busch Mountain Reserve",
     description: "A paradise for nature lovers",
@@ -119,7 +119,7 @@ export function AccommodationSection() {
           </h2>
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-6"></div>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Beuld Venue is located in Robertson, between McGregor and Robertson. 
+            Beuld Venue is located about 4km outside of Robertson. 
             We've handpicked wonderful places for you to stay during our celebration.
           </p>
         </div>
