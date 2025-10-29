@@ -84,7 +84,7 @@ Gentlemen: tie optional. Ladies: floor-length or cocktail dress.`,
               Summer formal
             </p>
             <p className="text-muted-foreground/70 max-w-xl text-md mx-auto italic">
-              Gentlemen are encouraged to wear formal pants and a tie — jackets are optional (we know February can be warm!) 
+              Gentlemen to wear formal pants and a tie — jackets are optional (we know February can be warm!) 
               Ladies can opt for a floor-length gown or a formal cocktail dress. 
               We can&apos;t wait to celebrate with you in style!
             </p>
