@@ -22,7 +22,7 @@ export function AccommodationSection() {
 //     }
 //   ];
 
-  const recommendedPlaces = [
+ const recommendedPlaces = [
   {
     name: "The Robertson Small Hotel",
     description: "Luxurious accommodation in the heart of Robertson",
@@ -34,12 +34,6 @@ export function AccommodationSection() {
     description: "Stylish guesthouse surrounded by succulents",
     link: "https://www.moandrose.co.za",
     distance: "Surrounded by succulents"
-  },
-  {
-    name: "Gubas De Hoek Meet Eat Sleep",
-    description: "Cozy guesthouse with a delightful restaurant",
-    link: "https://www.gubas-dehoek.co.za",
-    distance: "With excellent restaurant"
   },
   {
     name: "Galloway Guest House",
@@ -76,6 +70,42 @@ export function AccommodationSection() {
     description: "Peaceful self-catering cottages on a working farm",
     link: "https://www.dielaaitjie.co.za",
     distance: "Working farm stay"
+  },
+  {
+    name: "Randrivier",
+    description: "Private room with fabulous reviews",
+    link: "https://www.booking.com/searchresults.html?ss=Randrivier+Robertson",
+    distance: "1.1 miles from centre"
+  },
+  {
+    name: "House of Pinardt",
+    description: "Private room in town with superb ratings",
+    link: "https://www.booking.com/searchresults.html?ss=House+of+Pinardt+Robertson",
+    distance: "200 yards from centre"
+  },
+  {
+    name: "15 On Le Roux",
+    description: "Entire apartment with exceptional reviews",
+    link: "https://www.booking.com/searchresults.html?ss=15+On+Le+Roux+Robertson",
+    distance: "350 yards from centre"
+  },
+  {
+    name: "Angel 8 AirBnB Apartment 2",
+    description: "Entire apartment with fabulous reviews",
+    link: "https://www.booking.com/searchresults.html?ss=Angel+8+AirBnB+Robertson",
+    distance: "0.9 miles from centre"
+  },
+  {
+    name: "Croxley Farm",
+    description: "Entire bungalow with superb reviews",
+    link: "https://www.booking.com/searchresults.html?ss=Croxley+Farm+Robertson",
+    distance: "2.1 miles from centre"
+  },
+  {
+    name: "GuBas De Hoek Meet Eat Sleep",
+    description: "Private room with superb ratings",
+    link: "https://www.booking.com/searchresults.html?ss=GuBas+De+Hoek+Robertson",
+    distance: "0.3 miles from centre"
   }
 ];
 

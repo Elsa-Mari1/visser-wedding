@@ -17,6 +17,7 @@ export function RsvpSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [isAttending, setIsAttending] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -150,7 +151,12 @@ export function RsvpSection() {
 
             <div className="space-y-2">
               <Label htmlFor="attending" className="text-sm font-medium">Will you attend? *</Label>
-              <Select name="attending" defaultValue="yes" required>
+              <Select 
+                name="attending" 
+                defaultValue="yes" 
+                required
+                onValueChange={(value) => setIsAttending(value === "yes")}
+              >
                 <SelectTrigger id="attending" className="h-11 border-muted-foreground/20">
                   <SelectValue />
                 </SelectTrigger>
@@ -160,6 +166,22 @@ export function RsvpSection() {
                 </SelectContent>
               </Select>
             </div>
+
+            {isAttending && (
+              <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
+                <Label htmlFor="foodChoice" className="text-sm font-medium">Meal Selection *</Label>
+                <Select name="foodChoice" required>
+                  <SelectTrigger id="foodChoice" className="h-11 border-muted-foreground/20">
+                    <SelectValue placeholder="Please select your meal" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="roast_lamb">Roast lamb, parissienne potatoes, mange tout</SelectItem>
+                    <SelectItem value="confit_duck">Confit duck leg, mushroom risotto</SelectItem>
+                    <SelectItem value="moussaka">Moussaka with roasted vegetables and tomato sauce</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
 
             <div className="space-y-2">
               <Label htmlFor="dietary" className="text-sm font-medium">Dietary Restrictions</Label>

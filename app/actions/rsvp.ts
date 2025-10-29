@@ -11,11 +11,13 @@ export async function submitRsvp(formData: FormData) {
     const attending = formData.get("attending") === "yes"
     const dietary = formData.get("dietary") as string | null
     const message = formData.get("message") as string | null
+    const foodChoice = formData.get("foodChoice") as string | null
 
     const { error } = await supabase.from("rsvps").insert({
       first_name: firstName,
       last_name: lastName,
       attending,
+      food_choice: foodChoice || null,
       dietary_restrictions: dietary || null,
       message: message || null,
     })

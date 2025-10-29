@@ -4,6 +4,7 @@ create table if not exists public.rsvps (
   first_name text not null,
   last_name text not null,
   attending boolean default true,
+  food_choice text,
   dietary_restrictions text,
   message text,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
