@@ -70,17 +70,17 @@ export function OurStory() {
             >
               <h3 className="font-serif text-2xl md:text-3xl mb-4 text-foreground">How We Met</h3>
               <p className="text-base text-muted-foreground leading-relaxed text-pretty">
-                Steven and Elsa-Mari met at a speed dating event at church. Elsa-Mari's best friend, Jeanne-Marie,
+                Steven and Elsa-Mari met at a speed dating event at church. Elsa-Mari's best friend, Jeanne-Marié,
                 convinced her to go—even though she wasn't too keen at first. To make it easier, she brought her
                 brother, Jacques, along so she'd know someone there.
                 <br />
                 <br />
-                Even though it wasn't love at first sight for both, after the holidays, Elsa-Mari finally replied to
+                Even though it wasn't love at first sight for both of them, after the December holidays, Elsa-Mari finally replied to
                 Steven, and they went on their first date: a walk along the Sea Point Promenade. Their second date was a
                 sunset hike at Kloof Corner, and the third was a quick coffee before church. The very next week, after
-                the service, Steven asked if he could cook dinner for Elsa-Mari at his flat—and that Thursday, when she
+                the church service, Steven asked if he could cook dinner for Elsa-Mari at his flat—and that Thursday, when she
                 saw him walking down the stairs to welcome her, she started to feel butterflies. Over dinner, she
-                realized this guy was something special. From there, they were hooked.
+                realized that this man was something special. From there, they were hooked.
               </p>
             </div>
 
