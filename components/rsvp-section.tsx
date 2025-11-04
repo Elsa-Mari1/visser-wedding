@@ -112,7 +112,7 @@ export function RsvpSection() {
             Please let us know if you can join us for our special day
           </p>
           <p className="text-md md:text-lg text-muted-foreground/70 text-balance leading-relaxed">
-            RSVP BY: 15 November
+            RSVP BY: 20 November
           </p>
           <p className="text-sm text-muted-foreground/70 mt-4 italic">
             *Please RSVP for each guest individually ASAP
