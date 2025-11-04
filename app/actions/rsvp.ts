@@ -12,6 +12,8 @@ export async function submitRsvp(formData: FormData) {
     const dietary = formData.get("dietary") as string | null
     const message = formData.get("message") as string | null
     const foodChoice = formData.get("foodChoice") as string | null
+    const needsShuttle = formData.get("needsShuttle") === "yes"
+    const accommodationChoice = formData.get("accommodationChoice") as string | null
 
     const { error } = await supabase.from("rsvps").insert({
       first_name: firstName,
@@ -20,6 +22,8 @@ export async function submitRsvp(formData: FormData) {
       food_choice: foodChoice || null,
       dietary_restrictions: dietary || null,
       message: message || null,
+      needs_shuttle: attending ? needsShuttle : null,
+      accommodation_choice: attending ? accommodationChoice : null,
     })
 
     if (error) {

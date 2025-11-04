@@ -7,7 +7,13 @@ create table if not exists public.rsvps (
   food_choice text,
   dietary_restrictions text,
   message text,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+  needs_shuttle boolean,
+  accommodation_choice text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  
+  -- Add constraint to ensure accommodation_choice has valid values
+  constraint accommodation_choice_check 
+    check (accommodation_choice is null or accommodation_choice in ('cellar_in_town', 'hygge_house', 'sort_out_myself'))
 );
 
 -- Enable Row Level Security

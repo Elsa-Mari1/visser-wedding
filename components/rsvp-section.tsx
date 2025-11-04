@@ -1,14 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { submitRsvp } from "@/app/actions/rsvp"
 import { CheckCircle2, Heart } from "lucide-react"
 import confetti from "canvas-confetti"
 
@@ -20,7 +18,7 @@ export function RsvpSection() {
   const [isAttending, setIsAttending] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
+    useEffect(() => {
   if (isSubmitted) {
     confetti({
       particleCount: 100,
@@ -55,7 +53,13 @@ export function RsvpSection() {
     const formData = new FormData(e.currentTarget)
 
     try {
-      const result = await submitRsvp(formData)
+      // Replace this with your actual submitRsvp function
+      const response = await fetch('/api/rsvp', {
+        method: 'POST',
+        body: formData,
+      })
+      
+      const result = await response.json()
 
       if (result.success) {
         setIsSubmitted(true)
@@ -121,13 +125,12 @@ export function RsvpSection() {
         </div>
 
         <div
-  className={`bg-card border border-border rounded-2xl shadow-xl p-8 md:p-10 backdrop-blur-sm 
-    transition-all duration-1000 ${
-      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-    }`}
-  style={{ transitionDelay: "200ms" }}
->
-
+          className={`bg-card border border-border rounded-2xl shadow-xl p-8 md:p-10 backdrop-blur-sm 
+            transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          style={{ transitionDelay: "200ms" }}
+        >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -171,19 +174,48 @@ export function RsvpSection() {
             </div>
 
             {isAttending && (
-              <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
-                <Label htmlFor="foodChoice" className="text-sm font-medium">Meal Selection *</Label>
-                <Select name="foodChoice" required>
-                  <SelectTrigger id="foodChoice" className="h-11 border-muted-foreground/20">
-                    <SelectValue placeholder="Please select your meal" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="roast_lamb">Roast lamb, parissienne potatoes, mange tout</SelectItem>
-                    <SelectItem value="confit_duck">Confit duck leg, mushroom risotto</SelectItem>
-                    <SelectItem value="moussaka">Moussaka with roasted vegetables and tomato sauce</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              <>
+                <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
+                  <Label htmlFor="foodChoice" className="text-sm font-medium">Meal Selection *</Label>
+                  <Select name="foodChoice" required>
+                    <SelectTrigger id="foodChoice" className="h-11 border-muted-foreground/20">
+                      <SelectValue placeholder="Please select your meal" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="roast_lamb">Roast lamb, parissienne potatoes, mange tout</SelectItem>
+                      <SelectItem value="confit_duck">Confit duck leg, mushroom risotto</SelectItem>
+                      <SelectItem value="moussaka">Moussaka with roasted vegetables and tomato sauce</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
+                  <Label htmlFor="needsShuttle" className="text-sm font-medium">Will you need the shuttle? *</Label>
+                  <Select name="needsShuttle" required>
+                    <SelectTrigger id="needsShuttle" className="h-11 border-muted-foreground/20">
+                      <SelectValue placeholder="Select shuttle option" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="yes">Yes, I'll use the shuttle</SelectItem>
+                      <SelectItem value="no">No, I'll drive myself</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
+                  <Label htmlFor="accommodationChoice" className="text-sm font-medium">Accommodation Preference *</Label>
+                  <Select name="accommodationChoice" required>
+                    <SelectTrigger id="accommodationChoice" className="h-11 border-muted-foreground/20">
+                      <SelectValue placeholder="Select accommodation preference" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="cellar_in_town">Cellar in Town (3 Albert St)</SelectItem>
+                      <SelectItem value="hygge_house">Hygge House (52 Albert St)</SelectItem>
+                      <SelectItem value="sort_out_myself">I'll sort out my own accommodation</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </>
             )}
 
             <div className="space-y-2">
@@ -213,10 +245,9 @@ export function RsvpSection() {
               </div>
             )}
 
-          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit RSVP"}
-</Button>
-
+            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit RSVP"}
+            </Button>
           </form>
         </div>
 
