@@ -61,10 +61,13 @@ export function VenueLocation() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-lg mb-2 text-foreground">Parking Information</h4>
-                <p className="text-muted-foreground">
-                  There is parking available at the venue for those driving. If you are staying in town, a convenient shuttle will be running to and from the venue — you can simply pay when you hop on.
-                </p>
+                <h4 className="font-medium text-lg mb-2 text-foreground">Parking & Shuttle Information</h4>
+                    <p className="text-muted-foreground">
+                      There is parking available at the venue for guests who are driving.  
+                      If you are staying in town, a convenient shuttle service will be running to and from the venue.  
+                      Pickups are available anywhere from Robertson CBD up to Silwerstrand, at a cost of R125 per person for a return trip (indicate if you want to use it in the RSVP form below) — you can simply pay when you hop on.
+                    </p>
+
               </div>
 
               <div>
