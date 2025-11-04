@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CheckCircle2, Heart } from "lucide-react"
 import confetti from "canvas-confetti"
+import { submitRsvp } from "@/app/actions/rsvp"
 
 export function RsvpSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -45,33 +46,27 @@ export function RsvpSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setError(null)
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+  setError(null)
 
-    const formData = new FormData(e.currentTarget)
+  const formData = new FormData(e.currentTarget)
 
-    try {
-      // Replace this with your actual submitRsvp function
-      const response = await fetch('/api/rsvp', {
-        method: 'POST',
-        body: formData,
-      })
-      
-      const result = await response.json()
+  try {
+    const result = await submitRsvp(formData)
 
-      if (result.success) {
-        setIsSubmitted(true)
-      } else {
-        setError(result.error || "Failed to submit RSVP. Please try again.")
-      }
-    } catch (err) {
-      setError("An unexpected error occurred. Please try again.")
-    } finally {
-      setIsSubmitting(false)
+    if (result.success) {
+      setIsSubmitted(true)
+    } else {
+      setError(result.error || "Failed to submit RSVP. Please try again.")
     }
+  } catch (err) {
+    setError("An unexpected error occurred. Please try again.")
+  } finally {
+    setIsSubmitting(false)
   }
+}
 
   if (isSubmitted) {
     return (
