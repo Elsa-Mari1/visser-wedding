@@ -102,7 +102,7 @@ export function WeddingDetails() {
             <h3 className="font-serif text-2xl mb-2 text-foreground">Guest Policy</h3>
             <p className="text-muted-foreground/70 max-w-xl mx-auto italic">
               As much as we would love to celebrate with everyone, our venue has limited space. 
-              We kindly ask that only guests listed on the invitation attend — no plus-ones or children, please.
+              We kindly ask that only guests listed on the invitation attend (RSVP for each individually) — no plus-ones or children, please.
             </p>
           </div>
         </div>
